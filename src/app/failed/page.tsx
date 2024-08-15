@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Page() {
+export default function FailedPage() {
     return (
         <div className={`flex flex-col w-full h-screen items-center justify-center space-y-4`}>
             <h1 className={`text-3xl font-bold text-red-500`}>실패</h1>
