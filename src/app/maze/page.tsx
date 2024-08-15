@@ -58,12 +58,8 @@ export default function MazePage() {
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * 10 % 4)
         setGoalPosition(possibleGoals[randomIndex]);
-        console.log(possibleGoals[randomIndex]);
     }, []);
 
-    useEffect(() => {
-        console.log('playerPosition', playerPosition);
-    }, [playerPosition]);
 
     const handleKeyDown = useCallback((event: KeyboardEvent) => {
         let {x, y, heading} = playerPosition;
@@ -93,7 +89,6 @@ export default function MazePage() {
             return;
         }
 
-        console.log('current position', x, y);
         if(x === goalPosition.x && y === goalPosition.y) {
             router.push('/rsc');
             return;
